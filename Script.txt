@@ -1,3 +1,4 @@
+1. Create a WareHouse
 alter WAREHOUSE IDENTIFIER('"PRODIP_WH"') 
 set COMMENT = 'This is my own WareHouse' 
 WAREHOUSE_SIZE = 'Medium' 
