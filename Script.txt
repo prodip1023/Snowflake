@@ -6,3 +6,14 @@ AUTO_SUSPEND = 600
 AUTO_RESUME = true 
 ENABLE_QUERY_ACCELERATION = false 
 WAREHOUSE_TYPE = 'STANDARD'
+
+2. // Create First DB
+create or replace database PRODIP_FIRST_DB;
+3.  // Set database
+ USE DATABASE PRODIP_FIRST_DB;
+4. Load data from S3 bucket
+COPY INTO CONTACTS
+  FROM s3://snowflake-docs/tutorials/dataloading/contacts1.csv
+  file_format = (	type = 'CSV'
+  field_delimiter = '|'
+  skip_header = 1);
